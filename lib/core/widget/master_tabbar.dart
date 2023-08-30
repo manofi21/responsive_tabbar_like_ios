@@ -55,10 +55,12 @@ class _MasterTabbarState extends State<MasterTabbar> {
     _keys = List.generate(widget.listWidget.length,
         ((index) => GlobalKey(debugLabel: "Widget $index")));
 
+    // Listen all function in here
     widget.tabController.addListener(_handleTabChange);
     widget.tabController.animation?.addListener(_handleTabAnimation);
   }
 
+  // 1. Adding kondition for change TabBarView after click Text Button as TabBar
   // runs when the displayed tab changes
   void _handleTabChange() {
     final tabIndex = widget.tabController.index;
@@ -85,6 +87,7 @@ class _MasterTabbarState extends State<MasterTabbar> {
     }
   }
 
+  // 2.a Adding animation tabbar color
   void _triggerAnimation() {
     // reset the animations so they're ready to go
     widget.animationControllerOn.reset();
@@ -115,6 +118,7 @@ class _MasterTabbarState extends State<MasterTabbar> {
     }
   }
 
+  // 2.b Linking TabBarView with Text Button
   // runs during the switching tabs animation
   void _handleTabAnimation() {
     _aniValue = widget.tabController.animation?.value ?? _aniValue;
@@ -126,6 +130,7 @@ class _MasterTabbarState extends State<MasterTabbar> {
     _prevAniValue = _aniValue;
   }
 
+  // 3. Adding the scroll responsive
   void _scrollTo(int index) {
     // get the screen width. This is used to check if we have an element off screen
     double screenWidth = MediaQuery.of(context).size.width;
