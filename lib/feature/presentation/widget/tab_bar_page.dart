@@ -3,15 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:reusable_widget_tabbar_best_practice/core/widget/master_tabbar.dart';
 
+import '../../../core/constant/constant.dart';
 import '../../../core/model/master_tabbar_page_model.dart';
-
-  // active button's foreground color
-  const foregroundOn = Colors.white;
-  const foregroundOff = Colors.black;
-
-  // active button's background color
-  const backgroundOn = Colors.blue;
-  final backgroundOff = Colors.grey[300];
 
 class TabBarPage extends StatefulWidget {
   final List<MasterTabbarPageModel> listWidget;

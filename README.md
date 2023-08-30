@@ -409,7 +409,7 @@ Dibungkus dengan `AnimatedBuilder` dengan animation fokus pada variable _colorTw
     );
 ```
 
-### Membuat function untuk return background color dan foreground color. Setelah itu implementasi di button `TextButton`.
+#### Membuat function untuk return background color dan foreground color. Setelah itu implementasi di button `TextButton`.
 ```dart
   Color? _getBackgroundColor(int index) {
     if (index == _currentIndex) {

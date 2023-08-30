@@ -1,8 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
-import '../../feature/presentation/widget/tab_bar_page.dart'
-    show backgroundOff, foregroundOff;
+import '../constant/constant.dart';
 import '../model/master_tabbar_page_model.dart';
 
 /// Current Condition of Widget:
